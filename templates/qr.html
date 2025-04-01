@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <title>QR Code</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
 </head>
-<body>
-    <img src="data:image/png;base64,{{img_str}}" alt="">
+<body class="bg-gray-100">
+    <h1 class="text-2xl font-semibold mb-4 text-center mt-4">Your QR Code </h1>
+    <div class="bg-white p-6 rounded shadow-md flex flex-row justify-center ml-5 mr-5">
+        <img src="data:image/png;base64,{{img_str}}" alt="">
+    </div>
+    <div class="text-center mt-4">
+        <a href="index.html"  class="text-blue-500 ">Generate another QR Code</a>
+        <form class="mt-4">
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Download QR Code</button>
+            <button type="submit" class="bg-green-700 text-white px-4 py-2 rounded">Share QR Code</button>    
+        </form>
+    </div>
 </body>
 </html>
